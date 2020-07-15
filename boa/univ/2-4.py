@@ -1,7 +1,7 @@
 a = int(input(""))
 b = int(input(""))
 result = a + b
-print(a, "+", b, "=", result)
+print(a, "+", b, "=", result1)
 result1 = a - b
 print(a, "-", b, "=", result1)
 result2 = a * b
