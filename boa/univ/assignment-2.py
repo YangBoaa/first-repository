@@ -8,7 +8,6 @@ while 1:
     result3 = num1 * num2
     result4 = num1 / num2
 
-    print("원하는 연산의 숫자를 입력하세요: \n")
     print("1 = +, 2 = -, 3 = *, 4 = /, 5 = 종료")
 
     a = int(input(""))
