@@ -1,7 +1,7 @@
 while 1:
     print("두개의 숫자를 입력하세요: ")
-    num1 = int(input(""))
-    num2 = int(input(""))
+    num1 = float(input(""))
+    num2 = float(input(""))
 
     result1 = num1 + num2
     result2 = num1 - num2
@@ -9,7 +9,7 @@ while 1:
     result4 = num1 / num2
 
     print("원하는 연산의 숫자를 입력하세요: \n")
-    print("1 = +, 2 = -, 3 = *, 4 = /")
+    print("1 = +, 2 = -, 3 = *, 4 = /, 5 = 종료")
 
     a = int(input(""))
 
@@ -25,4 +25,5 @@ while 1:
                 if a == 4:
                     print(result4)
                 else:
-                    print("다시 입력해주세요")
+                    if a == 5:
+                        exit()
