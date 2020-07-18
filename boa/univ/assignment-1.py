@@ -1,26 +1,26 @@
 a = 100
 b = 20
-result = a + b
+res = a + b
 
-print(a, "+", b, "=", bin(result))
-print(a, "+", b, "=", oct(result))
-print(a, "+", b, "=", result)
-print(a, "+", b, "=", hex(result))
+print(a, "+", b, "=", bin(res))
+print(a, "+", b, "=", oct(res))
+print(a, "+", b, "=", res)
+print(a, "+", b, "=", hex(res))
 
-result = a - b
-print(a, "-", b, "=", bin(result))
-print(a, "-", b, "=", oct(result))
-print(a, "-", b, "=", result)
-print(a, "-", b, "=", hex(result))
+res = a - b
+print(a, "-", b, "=", bin(res))
+print(a, "-", b, "=", oct(res))
+print(a, "-", b, "=", res)
+print(a, "-", b, "=", hex(res))
 
-result = a * b
-print(a, "*", b, "=", bin(result))
-print(a, "*", b, "=", oct(result))
-print(a, "*", b, "=", result)
-print(a, "*", b, "=", hex(result))
+res = a * b
+print(a, "*", b, "=", bin(res))
+print(a, "*", b, "=", oct(res))
+print(a, "*", b, "=", res)
+print(a, "*", b, "=", hex(res))
 
-result = int(a / b)
-print(a, "/", b, "=", bin(result))
-print(a, "/", b, "=", oct(result))
-print(a, "/", b, "=", result)
-print(a, "/", b, "=", hex(result))
+res = int(a / b)
+print(a, "/", b, "=", bin(res))
+print(a, "/", b, "=", oct(res))
+print(a, "/", b, "=", res)
+print(a, "/", b, "=", hex(res))
