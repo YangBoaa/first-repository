@@ -15,15 +15,14 @@ while 1:
 
     if a == 1:
         print(result1)
+    elif a == 2:
+        print(result2)
+    elif a == 3:
+        print(result3)
+    elif a == 4:
+        print(result4)
+    elif a == 5:
+        break
     else:
-        if a == 2:
-            print(result2)
-        else:
-            if a == 3:
-                print(result3)
-            else:
-                if a == 4:
-                    print(result4)
-                else:
-                    if a == 5:
-                        exit()
+        print("허용되지 않음")
+        break
