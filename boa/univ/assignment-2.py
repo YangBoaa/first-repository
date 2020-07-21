@@ -24,4 +24,4 @@ while 1:
         break
     else:
         print("허용되지 않음")
-        break
+    break
