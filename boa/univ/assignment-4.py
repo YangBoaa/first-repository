@@ -11,9 +11,11 @@
 while True:
     list = []
     a = int(input("2이상의 점수를 입력하세요: "))
+
     for i in range(1, a):
         if a % i == 0:
             list.append(i)
+
     list.append(a)
     print(list)
 

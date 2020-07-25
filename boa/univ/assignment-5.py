@@ -10,9 +10,9 @@
 while True:
     list = []
     x = int(input("2 이상의 양의 정수를 입력하세요: "))
+
     for i in range(1, x):
         if x % i == 0:
-
             list.append(i)
             print(list)
 
