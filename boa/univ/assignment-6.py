@@ -16,16 +16,12 @@ for i in fuck:
     if not i.isdigit():
         output_string = output_string + i
 
-print(output_string)
-print(output_string.replace(" ", "\n"))
+    output_string.replace(" ", "\n")
 
-# print(fuck.isdigit()
 import random
 
-list1 = []
-list2 = []
 
-a = """
+abc = """
 가냘픈
 가는
 가엾은
@@ -208,11 +204,15 @@ a = """
 힘겨운
 힘찬
 """
-if a == "\n":
-    list1
-for i in a:
-    list1.append(i)
 
-print("\n".join(a))
-print(random.choice(a))
+output = ""
 
+for x in abc:
+    if not abc == "\n":
+        output = output + x
+    output.replace("\n", "\n")
+
+
+list1 = output_string.split(" ")
+list2 = output.split("\n")
+print("랜덤 (형용사 + 동물) : ", random.choice(list2), random.choice(list1))
