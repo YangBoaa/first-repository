@@ -14,9 +14,11 @@ output_string = ""
 
 for i in fuck:
     if not i.isdigit():
+        if i == " ":
+            i = "\n"
+
         output_string = output_string + i
 
-    output_string.replace(" ", "\n")
 
 import random
 
@@ -205,14 +207,18 @@ abc = """
 힘찬
 """
 
-output = ""
 
-for x in abc:
-    if not abc == "\n":
-        output = output + x
-    output.replace("\n", "\n")
+list1 = output_string.split("\n")
+list2 = abc.split("\n")
+list3 = []
 
+for a in range(0, len(list1)):
+    if list1[a] == "":
+        list3.append(a)
 
-list1 = output_string.split(" ")
-list2 = output.split("\n")
+list3.reverse()
+
+for a in list3:
+    del list1[a]
+
 print("랜덤 (형용사 + 동물) : ", random.choice(list2), random.choice(list1))
