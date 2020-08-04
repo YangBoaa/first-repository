@@ -1,5 +1,0 @@
-asddsa
-Life is too short
-Life is too short
-Life is too shortpython boa/wikidocs/06/wikidocs-06-4.py -a Life
-Hello
