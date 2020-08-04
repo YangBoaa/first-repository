@@ -4,11 +4,14 @@ import sys
 src = sys.argv[1]
 dst = sys.argv[2]
 
+# 파일 읽어들이는 기능
 f = open(src)
 tab_content = f.read()
 f.close()
 
-space_content = tab_content.replace("\t", " " * 4)
+
+# 문자열 변경 기능
+space_content = tab_content.replace("!", "*")
 
 f = open(dst, "w")
 f.write(space_content)
