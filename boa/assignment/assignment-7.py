@@ -12,7 +12,5 @@ for i in range(0, len(menu_list)):
     # abc = json_data["menu"][0]["lunch"]
     Word1 = re.compile("[가-힣]+")
     result = Word1.findall(str(menu_list[i]))
+    del result([])
     print(result)
-
-list1=[]  
-    list1.append(result)
