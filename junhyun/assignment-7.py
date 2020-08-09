@@ -1,7 +1,7 @@
 import json  # import json module
 import re
 
-with open("junhyun/menu.json") as json_file:
+with open("junhyun/menu.json", encoding="utf8") as json_file:
     json_data = json.load(json_file)
     data = json_data["menu"]
 
@@ -11,6 +11,8 @@ with open("junhyun/menu.json") as json_file:
         lunch_list_raw.append(data[a]["lunch"])
 
     lunch_list_raw = list(filter(None, lunch_list_raw))
+    print(lunch_list_raw)
+
     lunch_list = []
 
     for lunch in lunch_list_raw:

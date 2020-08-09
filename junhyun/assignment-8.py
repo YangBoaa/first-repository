@@ -12,6 +12,7 @@ lunch_list_raw = []
 
 for a in range(0, len(data)):
     lunch_list_raw.append(data[a]["lunch"])
+print(lunch_list_raw)
 
 lunch_list_raw = list(filter(None, lunch_list_raw))
 lunch_list = []
