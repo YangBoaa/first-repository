@@ -14,8 +14,18 @@
       ],
       "dinner": []
     },
-    { "date": "2", "breakfast": [], "lunch": [], "dinner": [] },
-    { "date": "3", "breakfast": [], "lunch": [], "dinner": [] },
+    {
+      "date": "2",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "date": "3",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
     {
       "date": "4",
       "breakfast": [],
@@ -81,8 +91,18 @@
       ],
       "dinner": []
     },
-    { "date": "9", "breakfast": [], "lunch": [], "dinner": [] },
-    { "date": "10", "breakfast": [], "lunch": [], "dinner": [] },
+    {
+      "date": "9",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "date": "10",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
     {
       "date": "11",
       "breakfast": [],
@@ -124,7 +144,12 @@
       ],
       "dinner": []
     },
-    { "date": "14", "breakfast": [], "lunch": [], "dinner": [] },
+    {
+      "date": "14",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
     {
       "date": "15",
       "breakfast": [],
@@ -138,8 +163,18 @@
       ],
       "dinner": []
     },
-    { "date": "16", "breakfast": [], "lunch": [], "dinner": [] },
-    { "date": "17", "breakfast": [], "lunch": [], "dinner": [] },
+    {
+      "date": "16",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "date": "17",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
     {
       "date": "18",
       "breakfast": [],
@@ -206,8 +241,18 @@
       ],
       "dinner": []
     },
-    { "date": "23", "breakfast": [], "lunch": [], "dinner": [] },
-    { "date": "24", "breakfast": [], "lunch": [], "dinner": [] },
+    {
+      "date": "23",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "date": "24",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
     {
       "date": "25",
       "breakfast": [],
@@ -273,6 +318,11 @@
       ],
       "dinner": []
     },
-    { "date": "30", "breakfast": [], "lunch": [], "dinner": [] }
+    {
+      "date": "30",
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    }
   ]
 }
