@@ -21,7 +21,7 @@ for lunch in lunch_list_raw:
     for a in range(0, len(lunch)):
         lunch[a] = re.sub("[^a-zA-Zㄱ-힗]", "", lunch[a])
         lunch_list.append(lunch[a])
-
+print(lunch_list)
 count = {}
 
 for menu in lunch_list:

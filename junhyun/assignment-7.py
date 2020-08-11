@@ -19,6 +19,7 @@ with open("junhyun/menu.json", encoding="utf8") as json_file:
         for a in range(0, len(lunch)):
             lunch[a] = re.sub("[^a-zA-Zㄱ-힗]", "", lunch[a])
             lunch_list.append(lunch[a])
+    print(lunch_list)
 
     count = {}
 
