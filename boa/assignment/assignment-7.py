@@ -15,7 +15,7 @@ with open(
     list1 = []
     for i in range(0, len(menu_list)):  # for문으로 0부터 menu_list의 길이 만큼 돌림
         Word1 = re.compile("[가-힣]+")  # 한글 추출
-        result = Word1.findall(str(menu_list[i]))  # 문자열의 단어글 정규식과 매치하여 리스트로 돌려줌
+        result = Word1.findall(str(menu_list[i]))  # 문자열의 단어를 정규식과 매치하여 리스트로 돌려줌
         list1.append(result)  # 리스트의 result 추가
     list1 = list(filter(None, list1))  # None를 걸러주는 코드
 
