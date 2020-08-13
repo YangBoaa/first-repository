@@ -2,6 +2,7 @@ import json  # import json module
 import re
 import operator
 import requests
+import datetime
 
 url = "https://schoolmenukr.ml/api/high/B100000593?year=2018&month=5"
 response = requests.get(url)
@@ -18,12 +19,14 @@ for i in range(0, len(menu_list)):  # for문으로 0부터 menu_list의 길이 �
 
 daily_lunch_list = list(filter(None, daily_lunch_list))  # None를 걸러주는 코드
 
-print(daily_lunch_list)
-
 final_lunch_list = []
 for lunch_list in daily_lunch_list:  # lunch_list가 lunch_list 변수에 대입
     for lunch in lunch_list:  # lunch_list가 b변수에 대입
-        final_lunch_list.append(lunch)  # 새로운 리스트에 추가
+        final_lunch_list.append(lunch)  # 새로운 리스트에 추가=
+
+while "송파" in final_lunch_list:
+    final_lunch_list.remove("송파")
+print(final_lunch_list)
 
 count = {}  # 개수 세기
 for i in final_lunch_list:  # final_lunch_list가 i 변수에 대입
@@ -40,3 +43,8 @@ sdict = sorted(
 for a in range(0, 3):
     print(f"{a+1}등: {sdict[a][0]}, {sdict[a][1]}번")  # for문을 사용하여 a로 등수와 sdict의 리스트로 추출
 
+day = input("날짜를 입력하세요: ")
+if day is None:
+    print("다시 입력해주세요.")
+
+json_data = json.loads(response.text)
