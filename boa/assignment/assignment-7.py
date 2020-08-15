@@ -22,7 +22,7 @@ daily_lunch_list = list(filter(None, daily_lunch_list))  # None를 걸러주는 
 final_lunch_list = []
 for lunch_list in daily_lunch_list:  # lunch_list가 lunch_list 변수에 대입
     for lunch in lunch_list:  # lunch_list가 b변수에 대입
-        final_lunch_list.append(lunch)  # 새로운 리스트에 추가=
+        final_lunch_list.append(lunch)  # 새로운 리스트에 추가
 
 while "송파" in final_lunch_list:
     final_lunch_list.remove("송파")
