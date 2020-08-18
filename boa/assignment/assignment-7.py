@@ -4,7 +4,29 @@ import operator
 import requests
 import datetime
 
-url = "https://schoolmenukr.ml/api/high/B100000593?year=2018&month=5"
+url = "https://schoolmenukr.ml/api/high/B100000593?"
+
+date = input("날짜를 입력하세요: ")
+year = date[:4]
+month = date[5:7]
+day = date[8:]
+
+if year == "":
+    year = None
+elif month == "":
+    month = None
+elif day == "":
+    day = None
+
+if year is not None and month is not None and day is not None:
+    url += f"year={year}&month={month}&day={day}"
+elif month is not None and year is not None:
+    pass
+elif year is not None:
+    pass
+
+print(url)
+
 response = requests.get(url)
 
 json_data = json.loads(response.text)  # json 파일을 읽어서 파싱하고 사용
@@ -26,7 +48,6 @@ for lunch_list in daily_lunch_list:  # lunch_list가 lunch_list 변수에 대입
             pass
         else:
             final_lunch_list.append(lunch)  # 새로운 리스트에 추가
-print(final_lunch_list)
 
 count = {}  # 개수 세기
 for i in final_lunch_list:  # final_lunch_list가 i 변수에 대입
@@ -42,27 +63,3 @@ sdict = sorted(
 
 for a in range(0, 3):
     print(f"{a+1}등: {sdict[a][0]}, {sdict[a][1]}번")  # for문을 사용하여 a로 등수와 sdict의 리스트로 추출
-
-date = input("날짜를 입력하세요: ")
-year = date[:4]
-month = date[5:7]
-day = date[8:]
-
-if year == "":
-    year = None
-elif month == "":
-    month = None
-elif day == "":
-    day = None
-
-if year is not None and month is not None and day is not None:
-    a = print(year + month + day)
-elif month is not None and year is not None:
-    print(year + month)
-elif year is not None:
-    url
-
-text = f"year:{a} "
-text += year
-print(text)
-
