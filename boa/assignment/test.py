@@ -1,30 +1,28 @@
-text = "'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'"
-print(text.split(","))
+import requests
 
-a = [
-    [
-        "기장밥",
-        "송파",
-        "뼈없는",
-        "닭갈비",
-        "송파",
-        "부추전",
-        "송파",
-        "깍두기",
-        "송파",
-        "매콤콩나물무침",
-        "송파",
-        "조랭이떡국",
-        "송파",
-    ]
-]
-a.remove("송파")
-print(a)
+url = "https://schoolmenukr.ml/api/high/B100000593?year=2018&month=5"
+response = requests.get(url)
 
-for i in range(len(daily_lunch_list)):
-    if i == "송파":
+date = input("날짜를 입력하세요: ")
+year = date[:4]
+month = date[5:7]
+day = date[8:]
+print(day)
 
+if year == "":
+    year = None
+elif month == "":
+    month = None
+elif day == "":
+    day = None
 
-while "송파" in daily_lunch_list:
-    daily_lunch_list.remove("송파")
-    print(daily_lunch_list)
+if year is not None and month is not None and day is not None:
+    print("!")
+elif month is not None and year is not None:
+    print("!!")
+elif year is not None:
+    print("!!!")
+
+text = f"year:{year} "
+text += year
+print(text)

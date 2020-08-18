@@ -22,10 +22,11 @@ daily_lunch_list = list(filter(None, daily_lunch_list))  # None를 걸러주는 
 final_lunch_list = []
 for lunch_list in daily_lunch_list:  # lunch_list가 lunch_list 변수에 대입
     for lunch in lunch_list:  # lunch_list가 b변수에 대입
-        if lunch == "songpa":
+        if lunch == "송파":
             pass
         else:
             final_lunch_list.append(lunch)  # 새로운 리스트에 추가
+print(final_lunch_list)
 
 count = {}  # 개수 세기
 for i in final_lunch_list:  # final_lunch_list가 i 변수에 대입
@@ -42,8 +43,26 @@ sdict = sorted(
 for a in range(0, 3):
     print(f"{a+1}등: {sdict[a][0]}, {sdict[a][1]}번")  # for문을 사용하여 a로 등수와 sdict의 리스트로 추출
 
-day = input("날짜를 입력하세요: ")
-if day is None:
-    print("다시 입력해주세요.")
+date = input("날짜를 입력하세요: ")
+year = date[:4]
+month = date[5:7]
+day = date[8:]
 
-json_data = json.loads(response.text)
+if year == "":
+    year = None
+elif month == "":
+    month = None
+elif day == "":
+    day = None
+
+if year is not None and month is not None and day is not None:
+    a = print(year + month + day)
+elif month is not None and year is not None:
+    print(year + month)
+elif year is not None:
+    url
+
+text = f"year:{a} "
+text += year
+print(text)
+
