@@ -7,23 +7,61 @@ import datetime
 url = "https://schoolmenukr.ml/api/high/B100000593?"
 
 date = input("날짜를 입력하세요: ")
-year = date[:4]
-month = date[5:7]
-day = date[8:]
+year = None
+month = None
+day = None
 
-if year == "":
-    year = None
-elif month == "":
-    month = None
-elif day == "":
-    day = None
+if len(date) == 4:
+    year = date
+
+elif 6 <= len(date) <= 7:
+
+    if len(date) == 6:
+        year = date[0:4]
+        month = date[5]
+
+    elif len(date) == 7:
+        year = date[0:4]
+        month = date[5:7]
+
+elif 8 <= len(date) <= 10:
+
+    if len(date) == 8:
+        year = date[0:4]
+        month = date[5]
+        day = date[7:10]
+
+    elif len(date) == 9:
+        year = date[0:4]
+        month = date[5:7]
+        day = date[8]
+
+    elif len(date) == 10:
+        year = date[0:4]
+        month = date[5:7]
+        day = date[8:10]
+
+# if len(date) == 9:
+# year = date[0:4]
+# month = date[5]
+# day = date[7:10]
+
+else:
+    print("Error")
+
+print(date)
+print(year)
+print(month)
+print(day)
+print(date.split("-"))
+raise Exception
 
 if year is not None and month is not None and day is not None:
     url += f"year={year}&month={month}&day={day}"
 elif month is not None and year is not None:
-    pass
+    url += f"year={year}&month={month}"
 elif year is not None:
-    pass
+    url += f"year={year}"
 
 print(url)
 
