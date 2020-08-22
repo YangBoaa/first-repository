@@ -1,3 +1,8 @@
+# 알레르기 정보 유무 선택
+# 학교 정보 선택
+# 년 선택
+# 년-월 선택
+
 import json  # import json module
 import re
 import operator
@@ -6,58 +11,15 @@ import datetime
 
 url = "https://schoolmenukr.ml/api/high/B100000593?"
 
-date = input("날짜를 입력하세요: ")
-year = None
-month = None
-day = None
+qurey = input("날짜를 입력하세요: ")
 
-if len(date) == 4:
-    year = date
+qurey = qurey.split("-")
+year = int(qurey[0])
+month = int(qurey[1])
+date = int(qurey[2])
 
-elif 6 <= len(date) <= 7:
-
-    if len(date) == 6:
-        year = date[0:4]
-        month = date[5]
-
-    elif len(date) == 7:
-        year = date[0:4]
-        month = date[5:7]
-
-elif 8 <= len(date) <= 10:
-
-    if len(date) == 8:
-        year = date[0:4]
-        month = date[5]
-        day = date[7:10]
-
-    elif len(date) == 9:
-        year = date[0:4]
-        month = date[5:7]
-        day = date[8]
-
-    elif len(date) == 10:
-        year = date[0:4]
-        month = date[5:7]
-        day = date[8:10]
-
-# if len(date) == 9:
-# year = date[0:4]
-# month = date[5]
-# day = date[7:10]
-
-else:
-    print("Error")
-
-print(date)
-print(year)
-print(month)
-print(day)
-print(date.split("-"))
-raise Exception
-
-if year is not None and month is not None and day is not None:
-    url += f"year={year}&month={month}&day={day}"
+if year is not None and month is not None and date is not None:
+    url += f"year={year}&month={month}&date={date}"
 elif month is not None and year is not None:
     url += f"year={year}&month={month}"
 elif year is not None:
@@ -69,6 +31,7 @@ response = requests.get(url)
 
 json_data = json.loads(response.text)  # json 파일을 읽어서 파싱하고 사용
 menu_list = json_data["menu"]
+print(menu_list)
 
 daily_lunch_list = []
 for i in range(0, len(menu_list)):  # for문으로 0부터 menu_list의 길이 만큼 돌림
