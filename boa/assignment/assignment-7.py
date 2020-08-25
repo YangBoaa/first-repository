@@ -1,7 +1,4 @@
-# 알레르기 정보 유무 선택
 # 학교 정보 선택
-# 년 선택
-# 년-월 선택
 
 import json  # import json module
 import re
@@ -9,7 +6,22 @@ import operator
 import requests
 import datetime
 
-url = "https://schoolmenukr.ml/api/high/B100000593?"
+url = "https://schoolmenukr.ml/code/api/"
+
+school = input("학교를 입력하세요: ")
+
+if school in "초등학교":
+    url += "elementary/"
+elif school in "중학교":
+    url += "middle/"
+elif school in "고등학교":
+    url += "higt/"
+else:
+    url += "special/"
+
+response = requests.get(url)
+school_infos = json.loads(response.text)
+print(school_infos)
 
 query = input("날짜를 입력하세요: ")
 query = query.split("-")
