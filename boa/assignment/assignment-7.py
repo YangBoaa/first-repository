@@ -11,13 +11,13 @@ url = "https://schoolmenukr.ml/code/api/"
 school = input("학교를 입력하세요: ")
 
 if school in "초등학교":
-    url += "elementary/"
+    url += "elementary"
 elif school in "중학교":
-    url += "middle/"
+    url += "middle"
 elif school in "고등학교":
-    url += "higt/"
+    url += "high"
 else:
-    url += "special/"
+    url += "special"
 
 response = requests.get(url)
 school_infos = json.loads(response.text)
