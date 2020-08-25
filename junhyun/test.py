@@ -55,7 +55,6 @@ elif month is not None and year is not None:
 elif year is not None:
     url += f"year={year}"
 
-print(url)
 response = requests.get(url)
 
 json_data = json.loads(response.text)  # json 파일을 읽어서 파싱하고 사용
