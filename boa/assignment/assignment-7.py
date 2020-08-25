@@ -6,22 +6,23 @@ import operator
 import requests
 import datetime
 
-url = "https://schoolmenukr.ml/code/api/"
+url = "https://schoolmenukr.ml/code/api?"
 
 school = input("학교를 입력하세요: ")
-
-if school in "초등학교":
-    url += "elementary"
-elif school in "중학교":
-    url += "middle"
-elif school in "고등학교":
-    url += "high"
-else:
-    url += "special"
-
+url += f"q={school}"
 response = requests.get(url)
-school_infos = json.loads(response.text)
-print(school_infos)
+
+school_data = json.loads(response.text)
+school_code = school_data["school_infos"][0]["code"]
+
+if "초등학교" in school:
+    school_type = "elementary"
+elif "중학교" in school:
+    school_type = "middle"
+elif "고등학교" in school:
+    school_type = "high"
+else:
+    school_type = "special"
 
 query = input("날짜를 입력하세요: ")
 query = query.split("-")
@@ -42,13 +43,14 @@ else:
     print("Error")
     raise Exception
 
-print("알러지를 입력 받겠습니까?\n 1: 네  2: 아니요\n")
-allergy = input()
+allergy = input("알러지를 입력 받겠습니까?\n 1: 네  2: 아니요\n")
 
 if allergy == "1":
-    url += "allergy=formed&"
+    allergy_code = "allergy=formed"
 elif allergy == "2":
-    url += "allergy=hidden&"
+    allergy_code = "allergy=hidden"
+
+url = f"https://schoolmenukr.ml/api/{school_type}/{school_code}?{allergy_code}&"
 
 if year is not None and month is not None and date is not None:
     url += f"year={year}&month={month}&date={date}"
@@ -57,13 +59,9 @@ elif month is not None and year is not None:
 elif year is not None:
     url += f"year={year}"
 
-print(url)
-
 response = requests.get(url)
-
 json_data = json.loads(response.text)  # json 파일을 읽어서 파싱하고 사용
 menu_list = json_data["menu"]
-print(menu_list)
 
 daily_lunch_list = []
 for i in range(0, len(menu_list)):  # for문으로 0부터 menu_list의 길이 만큼 돌림
