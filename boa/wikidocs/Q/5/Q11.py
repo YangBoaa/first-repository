@@ -1,8 +1,5 @@
-import os, glob
-import os.path
+import glob
+import os
 
-a = r"C:\workspace\first-repository\boa\wikidos\Q\5"
-files = os.listdir(a)
-condition = "*.py"
-csvfiles = glob.glob(condition)
-print(csvfiles)
+all_dir = glob.glob("C:\\workspace\\first-repository\\boa\\wikidocs\\Q\\5\\*py")
+print(all_dir)

@@ -5,12 +5,8 @@ class MaxLimitCalculator:
     def add(self, val):
         self.value += val
 
-    def setdata(self, first, second):
-        self.first = first
-        self.second = second
-
     def q(self):
-        if self.first + self.second == 110:
+        if self.first + self.second == 1:
             print("!")
         else:
             return self.first + self.second
