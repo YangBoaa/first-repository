@@ -5,15 +5,12 @@ class Calculator:
     def add(self, val):
         self.value += val
 
-    def setdata(self, first, second):
-        self.first = first
-        self.second = second
-
-    def minus(self):
-        result = self.first - self.second
-        return result
+    def minus(self, val):
+        self.value -= val
 
 
 cal = Calculator()
-cal.setdata(10, 7)
-print(cal.minus())
+cal.add(10)
+cal.minus(7)
+
+print(cal.value)
