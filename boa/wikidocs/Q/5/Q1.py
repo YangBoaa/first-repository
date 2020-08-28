@@ -5,11 +5,13 @@ class Calculator:
     def add(self, val):
         self.value += val
 
+
+class UpgradeCalculator(Calculator):
     def minus(self, val):
         self.value -= val
 
 
-cal = Calculator()
+cal = UpgradeCalculator()
 cal.add(10)
 cal.minus(7)
 
